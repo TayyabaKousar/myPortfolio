@@ -3,75 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tayyaba Kousar | Portfolio</title>
-    <!-- Tailwind CSS -->
+    <title>Tayyaba Kousar | Creative Developer</title>
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons -->
+    
+    <!-- Google Fonts: Serif (Heading) & Sans (Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom Theme Configuration -->
+    
+    <!-- Tailwind Custom Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4f46e5', // Indigo-600 (Professional Blue/Purple)
-                        secondary: '#f8fafc', // Slate-50 (Light background)
-                        dark: '#1e293b', // Slate-800 (Text)
+                        primary: '#4f46e5',   // Indigo
+                        accent: '#ff6b6b',    // Coral
+                        surface: '#fbfbfd',   // Off-white paper
+                        dark: '#111827',      // Near black
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
                     }
                 }
             }
         }
     </script>
+
     <style>
-        /* Custom Animation Classes */
+        /* 1. Grain Texture Overlay (Makes it look premium/human-made) */
+        .grain-overlay::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* 2. Creative Scroll Reveal */
         .reveal {
             opacity: 0;
+            filter: blur(12px);
             transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
         }
         .reveal.active {
             opacity: 1;
+            filter: blur(0);
             transform: translateY(0);
         }
+
+        /* Custom Underline for Nav */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1.5px;
+            bottom: -4px;
+            left: 0;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        /* View About Button Animation */
+.view-about-btn {
+    background: transparent;
+    position: relative;
+    padding: 12px 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #4f46e5; /* Primary Indigo Color */
+    border-radius: 12px; /* Matching your theme's rounded-xl */
+    outline: none;
+    overflow: hidden;
+    color: #4f46e5;
+    transition: color 0.3s 0.1s ease-out;
+    z-index: 1;
+}
+
+.view-about-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.view-about-btn::before {
+    position: absolute;
+    top: 0;
+    left: -5em;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 25em;
+    height: 25em;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.view-about-btn:hover {
+    color: #fff;
+    border: 2px solid #4f46e5;
+}
+
+.view-about-btn:hover::before {
+    box-shadow: inset 0 0 0 15em #4f46e5; /* Fills with Indigo on hover */
+}
+
+/* Active click effect */
+.view-about-btn:active {
+    transform: scale(0.95);
+}
+/* Progress Bar Fill Animation */
+@keyframes fill-bar {
+    from { width: 0; }
+}
+
+/* Jab parent par .active class aaye (Scroll reveal ke waqt), tab bars load hon */
+.reveal.active .skill-bar {
+    animation: fill-bar 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) forwards;
+}
+
+/* Bar ke andar ek chamak (Shine effect) add karne ke liye */
+.skill-bar::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
     </style>
 </head>
-<body class="bg-secondary text-dark font-sans leading-relaxed">
+<body class="bg-surface text-dark font-sans grain-overlay overflow-x-hidden">
 
     <!-- Navigation Bar -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-bold text-2xl text-primary" aria-label="Go to home">TK.</a>
+    <nav class="fixed w-full z-[100] bg-surface/80 backdrop-blur-md border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-black tracking-tighter group">
+                        TK<span class="text-primary inline-block group-hover:rotate-12 transition-transform">.</span>
+                    </a>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#hero" class="hover:text-primary transition font-medium">Home</a>
-                    <a href="#about" class="hover:text-primary transition font-medium">About</a>
-                    <a href="#skills" class="hover:text-primary transition font-medium">Skills</a>
-                    <a href="#projects" class="hover:text-primary transition font-medium">Projects</a>
-                    <a href="#contact" class="hover:text-primary transition font-medium">Contact Me</a>
+                
+                <!-- Desktop Navigation (Contact Me is now a link) -->
+                <div class="hidden md:flex items-center space-x-10 text-[13px] font-bold uppercase tracking-widest text-slate-500">
+                    <a href="#hero" class="nav-link hover:text-dark transition-colors">Home</a>
+                    <a href="#about" class="nav-link hover:text-dark transition-colors">About</a>
+                    <a href="#skills" class="nav-link hover:text-dark transition-colors">Skills</a>
+                    <a href="#projects" class="nav-link hover:text-dark transition-colors">Projects</a>
+                    <a href="#contact" class="nav-link hover:text-dark transition-colors">Contact Me</a>
                 </div>
-                <!-- Mobile Menu Button (simplified) -->
-                <div class="md:hidden text-2xl text-primary">
-                    <i class="fa-solid fa-bars"></i>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="p-2 text-dark">
+                        <i class="fa-solid fa-bars-staggered text-xl"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Sections Container -->
+    <!-- Artistic Background Blobs (Using Tailwind blur) -->
+    <div class="fixed top-[-10%] right-[-10%] w-[500px] h-[500px] bg-indigo-100 rounded-full blur-[120px] opacity-50 -z-10"></div>
+    <div class="fixed bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-pink-50 rounded-full blur-[100px] opacity-60 -z-10"></div>
+
+    <!-- Main Content -->
     <main>
-        <!-- Content will be injected here via JavaScript -->
-        <div id="hero-container"></div>
-        <div id="about-container"></div>
-        <div id="skills-container"></div>
-        <div id="projects-container"></div>
+        <!-- Components injected via app.js -->
+        <section id="hero-container" class="min-h-screen"></section>
+        
+        <div id="about-container" class="relative z-10"></div>
+        
+        <div id="skills-container" class="relative z-10 py-10"></div>
+        
+        <div id="projects-container" class="relative z-10 py-10"></div>
     </main>
 
-    <!-- Footer Container -->
-    <div id="footer-container"></div>
+    <!-- Footer -->
+    <footer id="footer-container"></footer>
 
-    <!-- JavaScript Link -->
+    <!-- Your JavaScript -->
     <script src="app.js"></script>
+
 </body>
 </html>
