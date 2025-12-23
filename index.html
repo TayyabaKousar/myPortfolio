@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tayyaba Kousar | Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f46e5', // Indigo-600 (Professional Blue/Purple)
+                        secondary: '#f8fafc', // Slate-50 (Light background)
+                        dark: '#1e293b', // Slate-800 (Text)
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-secondary text-dark font-sans leading-relaxed">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-bold text-2xl text-primary" aria-label="Go to home">TK.</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="hover:text-primary transition font-medium">Home</a>
+                    <a href="#about" class="hover:text-primary transition font-medium">About</a>
+                    <a href="#skills" class="hover:text-primary transition font-medium">Skills</a>
+                    <a href="#projects" class="hover:text-primary transition font-medium">Projects</a>
+                    <a href="#contact" class="hover:text-primary transition font-medium">Contact Me</a>
+                </div>
+                <!-- Mobile Menu Button (simplified) -->
+                <div class="md:hidden text-2xl text-primary">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sections Container -->
+    <main>
+        <!-- Content will be injected here via JavaScript -->
+        <div id="hero-container"></div>
+        <div id="about-container"></div>
+        <div id="skills-container"></div>
+        <div id="projects-container"></div>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript Link -->
+    <script src="app.js"></script>
+</body>
+</html>
