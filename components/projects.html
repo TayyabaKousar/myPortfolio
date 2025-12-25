@@ -1,82 +1,99 @@
-<section id="projects" class="py-20 bg-white">
+<section id="projects" class="py-20 bg-slate-50/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
         <div class="text-center mb-16 reveal">
             <h2 class="text-3xl font-bold text-slate-900">Recent Projects</h2>
             <div class="w-20 h-1 bg-primary mx-auto mt-2"></div>
-            <p class="mt-4 text-slate-600">Learning by doing.</p>
+            <p class="mt-4 text-slate-600 font-medium italic">Learning by doing.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 0: Figma Design to Website -->
-            <div class="group relative overflow-hidden rounded-xl shadow-lg reveal">
-                <div class="h-48 w-full overflow-hidden rounded-t-lg">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80" alt="Figma design mockup" class="w-full h-full object-cover">
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- Project 1: Figma to Website (GrowthSpace) -->
+            <div class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden reveal transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                <div class="h-52 w-full overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80" alt="GrowthSpace Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 </div>
-                <div class="p-6 bg-white">
-                    <h3 class="text-xl font-bold mb-2">Figma Design → Website</h3>
-                    <p class="text-slate-600 text-sm mb-4">
-                        Converted a Figma UI design into a responsive website using HTML, Tailwind CSS and small JS interactions. Includes pixel-perfect layouts and responsive breakpoints.
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Figma Design → Website</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        Converted a Figma UI design into a responsive website (GrowthSpace) using HTML and Tailwind CSS.
                     </p>
-                    <div class="flex gap-2 text-xs">
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">Figma</span>
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">HTML</span>
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">Tailwind</span>
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md uppercase">Tailwind</span>
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md uppercase">HTML</span>
                     </div>
-                </div>
-            </div>
-            <!-- Project 1 -->
-            <div class="group relative overflow-hidden rounded-xl shadow-lg reveal">
-                <div class="h-48 w-full overflow-hidden rounded-t-lg">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80" alt="Portfolio preview" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 bg-white">
-                    <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
-                    <p class="text-slate-600 text-sm mb-4">
-                        A clean, responsive portfolio built with HTML, Tailwind CSS, and JS components.
-                    </p>
-                    <div class="flex gap-2 text-xs">
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">HTML</span>
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">Tailwindcss</span>
-                         <span class="bg-indigo-100 text-primary px-2 py-1 rounded">JavaScript</span>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/TayyabaKousar/growthspace" target="_blank" class="flex-1 text-center py-2 border border-primary text-primary rounded-lg text-sm font-bold hover:bg-indigo-50 transition">View Code</a>
+                        <a href="#" class="flex-1 text-center py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-indigo-700 transition shadow-sm">Live Demo</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2: FYP Portal -->
-            <div class="group relative overflow-hidden rounded-xl shadow-lg reveal">
-                <div class="h-48 w-full overflow-hidden rounded-t-lg">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAADDCAMAAABeUu/HAAAAdVBMVEX///8AAACXl5fe3t6vr6/i4uJKSkrMzMzt7e35+fltbW3Hx8cnJyczMzMfHx8rKyuQkJDX19fz8/N+fn5lZWXp6em1tbVCQkKLi4vBwcEZGRlgYGDCwsIuLi5paWkTExOjo6NWVlZNTU2enp54eHg6OjoNDQ2U89qGAAAE8ElEQVR4nO3d63aqOhQF4BklCggoWsRrvVXf/xG3gmgihNYdGN3nMNe/hiQj+SAXQjuKHjofJCABCUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJIAVgdu3jqSoa/pWMSmlO22i91lYECyEdXwWdS3fLBgc/Z6zSeqa9+P4XYKPoq53CbKIjrPl7xJ4t8BIbdRnnuh5STz/SleP9LXreTO989O8uFrZdDS4XTrM5b0WTy0xSPI0N3b88SP1PP9NgjyGajN97VI8C+7ph+vITcZqTlHZdOd6YaL8rBG4z/Tp+pm+lpY9aJMA2Azy9OOt+Y5GEHgVlV3H1kz92UQAuVUuDO160C4BZP4cpLfmewPNYFKuSw7EQLunRgJPnYgiux40S/BZupxk6ees+fFKzRuNyo15HR9GAv2RWlv1oG0C7G/pYd78ifYY+K9LuwxfO2MmWO6USzurhaF1Avc2cwV585OzZvA6I16FYj3FTDDSJteFTQ9aJ8ge2ei+iZlrBCt9RnTLc4mZINY0B32LHrRP4B6EuBT7uINmoM3+8EX02hMzQT9Vr0U2i0L7BNkusiCI1SEsdmrLh5FYvC6UZgKpLy//DsGHKcdjN9/TWu4rfZ6JMH4t+mOC8ury82iNIB4Ni/4FCkGiDwXnkX9ZtVP4bxOE4lLscuaTyXP9W17UAufCxvsUq/L7r5mgrxHs/sWB4I3FuHrz/qHdvmJGvL5tncp5awi06XBbGkJvRFsEm52JwNUIxH0RCEVYcQhiJtAXxbXNyUFbBNdlwECQ7xcfccxmDKf61dFMMNS2Rla9aIlAHs0E7lotks2I7lGs3YqsZoKl+r4xthkHbRHc7rSJQN/fi1RmD4FTldNMoO0zZ1VlfxzNEhRvORtRRwD9AGkGmRpe9swEJxXRrgdtELj5LTITuNpbsxjuS+9H9zASqIPJai5E0wRHV8bL3r15ZoKXA6R0a3rjNxIox62zqknknWiW4BJug8cdriGYHoQehvnMRLB/zCZnm31hHs0SaFFDgDjQsk6qDhKhE4wXkywWX8XG8JL6v3yInodGMHBOEz/8AYF+gLTaGHIZeUWU+r25zSnBM5o/Pp3KZfo9QaxubQLT01z1FPT2880w7svGvqi1c4L89S2BDN8lGNhOe6Zoh8DzO0+A4bbzBLeh0HUC59J5Ahl0ngAhCY5i23WCzX5et3npAsE3QQISkAAkAAlAApAAJAAJQAL8Xwim8hbax711kqXVnux6WZbRViVwsrTpayap1p3GeZrhvP3vw4Jgv4quoX0bu0RZiLpiI5HnUSOrabd/ZoqjUqZ73YHtb12XwoLgJIxRV2xjLKW0xfyBRjTz8UAJC4LYMcW+rlhiLKZ8VXONmZzm/iLnHvzzLBKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAgmtU/MuqrsXh1Ot4/AFg6Ts3VJFx0gAAAABJRU5ErkJggg==" alt="Student portal UI" class="w-full h-full object-cover">
+            <!-- Project 2: Portfolio Website -->
+            <div class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden reveal transition-all duration-500 hover:-translate-y-2 hover:shadow-xl" style="transition-delay: 100ms;">
+                <div class="h-52 w-full overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80" alt="Portfolio Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 </div>
-                <div class="p-6 bg-white">
-                    <h3 class="text-xl font-bold mb-2">FYP Portal</h3>
-                    <p class="text-slate-600 text-sm mb-4">
-                        Final Year Project: a student portal for project submission, supervisor allocation, and progress tracking.
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Personal Portfolio</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        A clean, modular portfolio built with HTML, Tailwind CSS, and Vanilla JS for dynamic component loading.
                     </p>
-                    <div class="flex gap-2 text-xs">
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">HTML</span>
-                         <span class="bg-indigo-100 text-primary px-2 py-1 rounded">Tailwindcss</span>
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">JavaScript</span>
-                       
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md uppercase">JavaScript</span>
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md uppercase">Tailwind</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/TayyabaKousar/myPortfolio" target="_blank" class="flex-1 text-center py-2 border border-primary text-primary rounded-lg text-sm font-bold hover:bg-indigo-50 transition">View Code</a>
+                        <a href="#" class="flex-1 text-center py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-indigo-700 transition shadow-sm">Live Demo</a>
                     </div>
                 </div>
             </div>
-            <!-- Project 3: Real Estate UI -->
-            <div class="group relative overflow-hidden rounded-xl shadow-lg reveal">
-                <div class="h-48 w-full overflow-hidden rounded-t-lg">
-                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1400&q=80" alt="Real estate UI" class="w-full h-full object-cover">
+
+            <!-- Project 3: FYP Portal (Original Image Restored) -->
+            <div class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden reveal transition-all duration-500 hover:-translate-y-2 hover:shadow-xl" style="transition-delay: 200ms;">
+                <div class="h-52 w-full overflow-hidden">
+                    <!-- Aapki original image yahan wapis laga di hai -->
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAADDCAMAAABeUu/HAAAAdVBMVEX///8AAACXl5fe3t6vr6/i4uJKSkrMzMzt7e35+fltbW3Hx8cnJyczMzMfHx8rKyuQkJDX19fz8/N+fn5lZWXp6em1tbVCQkKLi4vBwcEZGRlgYGDCwsIuLi5paWkTExOjo6NWVlZNTU2enp54eHg6OjoNDQ2U89qGAAAE8ElEQVR4nO3d63aqOhQF4BklCggoWsRrvVXf/xG3gmgihNYdGN3nMNe/hiQj+SAXQjuKHjofJCABCUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJIAVgdu3jqSoa/pWMSmlO22i91lYECyEdXwWdS3fLBgc/Z6zSeqa9+P4XYKPoq53CbKIjrPl7xJ4t8BIbdRnnuh5STz/SleP9LXreTO989O8uFrZdDS4XTrM5b0WTy0xSPI0N3b88SP1PP9NgjyGajN97VI8C+7ph+vITcZqTlHZdOd6YaL8rBG4z/Tp+pm+lpY9aJMA2Azy9OOt+Y5GEHgVlV3H1kz92UQAuVUuDO160C4BZP4cpLfmewPNYFKuSw7EQLunRgJPnYgiux40S/BZupxk6ees+fFKzRuNyo15HR9GAv2RWlv1oG0C7G/pYd78ifYY+K9LuwxfO2MmWO6USzurhaF1Avc2cwV585OzZvA6I16FYj3FTDDSJteFTQ9aJ8ge2ei+iZlrBCt9RnTLc4mZINY0B32LHrRP4B6EuBT7uINmoM3+8EX02hMzQT9Vr0U2i0L7BNkusiCI1SEsdmrLh5FYvC6UZgKpLy//DsGHKcdjN9/TWu4rfZ6JMH4t+mOC8ury82iNIB4Ni/4FCkGiDwXnkX9ZtVP4bxOE4lLscuaTyXP9W17UAufCxvsUq/L7r5mgrxHs/sWB4I3FuHrz/qHdvmJGvL5tncp5awi06XBbGkJvRFsEm52JwNUIxH0RCEVYcQhiJtAXxbXNyUFbBNdlwECQ7xcfccxmDKf61dFMMNS2Rla9aIlAHs0E7lotks2I7lGs3YqsZoKl+r4xthkHbRHc7rSJQN/fi1RmD4FTldNMoO0zZ1VlfxzNEhRvORtRRwD9AGkGmRpe9swEJxXRrgdtELj5LTITuNpbsxjuS+9H9zASqIPJai5E0wRHV8bL3r15ZoKXA6R0a3rjNxIox62zqknknWiW4BJug8cdriGYHoQehvnMRLB/zCZnm31hHs0SaFFDgDjQsk6qDhKhE4wXkywWX8XG8JL6v3yInodGMHBOEz/8AYF+gLTaGHIZeUWU+r25zSnBM5o/Pp3KZfo9QaxubQLT01z1FPT2880w7svGvqi1c4L89S2BDN8lGNhOe6Zoh8DzO0+A4bbzBLeh0HUC59J5Ahl0ngAhCY5i23WCzX5et3npAsE3QQISkAAkAAlAApAAJAAJQAL8Xwim8hbax711kqXVnux6WZbRViVwsrTpayap1p3GeZrhvP3vw4Jgv4quoX0bu0RZiLpiI5HnUSOrabd/ZoqjUqZ73YHtb12XwoLgJIxRV2xjLKW0xfyBRjTz8UAJC4LYMcW+rlhiLKZ8VXONmZzm/iLnHvzzLBKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAApAAJAAJQAKQACQACUACkAAkAAlAgmtU/MuqrsXh1Ot4/AFg6Ts3VJFx0gAAAABJRU5ErkJggg==" alt="FYP Portal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 </div>
-                <div class="p-6 bg-white">
-                    <h3 class="text-xl font-bold mb-2">Real Estate UI</h3>
-                    <p class="text-slate-600 text-sm mb-4">
-                        A modern real estate listing UI showcasing property cards, filters, and responsive layouts built with HTML and Tailwind CSS.
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">FYP Management Portal</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        A management system for project submissions, supervisor allocation, and tracking for university students.
                     </p>
-                    <div class="flex gap-2 text-xs">
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">HTML</span>
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">Tailwind CSS</span>
-                        <span class="bg-indigo-100 text-primary px-2 py-1 rounded">JavaScript</span>
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md uppercase">React</span>
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md uppercase">TypeScript</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/TayyabaKousar/Fyp-Portal" target="_blank" class="flex-1 text-center py-2 border border-primary text-primary rounded-lg text-sm font-bold hover:bg-indigo-50 transition">View Code</a>
+                        <a href="#" class="flex-1 text-center py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-indigo-700 transition shadow-sm">Live Demo</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Project 4: Real Estate UI (In Progress) -->
+            <div class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden reveal transition-all duration-500 hover:-translate-y-2 hover:shadow-xl" style="transition-delay: 300ms;">
+                <div class="h-52 w-full overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1400&q=80" alt="Real Estate" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Real Estate UI (Coming Soon)</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        A modern property listing UI showcasing property cards and advanced search filters. (Under Development)
+                    </p>
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md uppercase">In Progress</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <button disabled class="flex-1 text-center py-2 border border-slate-200 text-slate-300 rounded-lg text-sm font-bold cursor-not-allowed">Code</button>
+                        <button disabled class="flex-1 text-center py-2 bg-slate-100 text-slate-400 rounded-lg text-sm font-bold cursor-not-allowed shadow-sm">Demo</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
