@@ -28,6 +28,7 @@ async function init() {
     const components = [
         { id: 'hero-container', file: 'components/hero.html' },
         { id: 'about-container', file: 'components/about.html' },
+        { id: 'background-container', file: 'components/BackGround.html' },
         { id: 'stats-container', file: 'components/stats.html' },
         { id: 'skills-container', file: 'components/skills.html' },
         { id: 'projects-container', file: 'components/projects.html' },
