@@ -5,220 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tayyaba Kousar | Creative Developer</title>
     
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Serif (Heading) & Sans (Body) -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Tailwind Custom Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#4f46e5',   // Indigo
-                        accent: '#ff6b6b',    // Coral
-                        surface: '#fbfbfd',   // Off-white paper
-                        dark: '#111827',      // Near black
-                    },
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'], 
+                        serif: ['"Playfair Display"', 'serif'], 
+                    },
+                    colors: {
+                        primary: '#4f46e5', // Indigo
+                        dark: '#0f172a', 
+                        light: '#f8fafc',
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
                     }
                 }
             }
         }
     </script>
 
-  <style>
-    /* 1. Grain Texture Overlay (AI flatness khatam karne ke liye) */
-    .grain-overlay::before {
-        content: "";
-        position: fixed;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: url('https://grainy-gradients.vercel.app/noise.svg');
-        opacity: 0.05;
-        pointer-events: none;
-        z-index: 50;
-    }
+    <style>
+        /* Grain Texture */
+        .noise-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 50; opacity: 0.04;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
 
-    /* 2. Global Neon Theme Variables */
-    :root {
-        --neon-indigo: #4f46e5;
-        --neon-glow: rgba(79, 70, 229, 0.4);
-    }
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #d946ef 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    /* 3. Creative Scroll Reveal (Smooth Blur effect) */
-    .reveal {
-        opacity: 0;
-        filter: blur(12px);
-        transform: translateY(30px);
-        transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    .reveal.active {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateY(0);
-    }
-
-    /* 4. Navigation Link Neon Underline */
-    .nav-link { position: relative; }
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 0; height: 2px;
-        bottom: -4px; left: 0;
-        background-color: var(--neon-indigo);
-        box-shadow: 0 0 10px var(--neon-glow);
-        transition: width 0.3s ease;
-    }
-    .nav-link:hover::after { width: 100%; }
-
-    /* 5. Neon Button (Twitter-style fill animation) */
-    .view-about-btn {
-        background: transparent;
-        position: relative;
-        padding: 12px 32px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-        font-weight: 700;
-        border: 2px solid var(--neon-indigo);
-        border-radius: 12px;
-        overflow: hidden;
-        color: var(--neon-indigo);
-        transition: all 0.3s ease;
-        z-index: 1;
-    }
-    .view-about-btn span { position: relative; z-index: 2; }
-    .view-about-btn::before {
-        position: absolute;
-        top: 0; left: -5em; right: 0; bottom: 0;
-        margin: auto; content: '';
-        border-radius: 50%;
-        width: 25em; height: 25em;
-        transition: box-shadow 0.5s ease-out;
-        z-index: -1;
-    }
-    .view-about-btn:hover { color: #fff; box-shadow: 0 0 20px var(--neon-glow); }
-    .view-about-btn:hover::before { box-shadow: inset 0 0 0 15em var(--neon-indigo); }
-    .view-about-btn:active { transform: scale(0.95); }
-
-    /* 6. Neon Progress Bars */
-    @keyframes fill-bar { from { width: 0; } }
-    .reveal.active .skill-bar {
-        animation: fill-bar 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) forwards;
-    }
-    .skill-bar {
-        box-shadow: 0 0 15px var(--neon-glow);
-        position: relative;
-    }
-    .skill-bar::after {
-        content: "";
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-        animation: shine 2s infinite;
-    }
-    @keyframes shine {
-        from { transform: translateX(-100%); }
-        to { transform: translateX(100%); }
-    }
-
-    /* 7. Neon Cards (Glassmorphism) */
-    .neon-card-indigo {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(79, 70, 229, 0.1);
-        transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .neon-card-indigo:hover {
-        border-color: var(--neon-indigo);
-        box-shadow: 0 0 25px var(--neon-glow);
-        transform: translateY(-12px) scale(1.02);
-    }
-
-    /* 8. Global Animations */
-    @keyframes float-subtle {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-    .animate-float-slow { animation: float-subtle 5s ease-in-out infinite; }
-
-    .text-neon {
-        color: var(--neon-indigo);
-        text-shadow: 0 0 8px var(--neon-glow);
-    }
-</style>
-
-
+        /* Nav Link Hover Effect (Simple) */
+        .nav-link:hover {
+            color: #4f46e5;
+        }
+    </style>
 </head>
-<body class="bg-surface text-dark font-sans grain-overlay overflow-x-hidden">
+<body class="bg-[#f8fafc] text-slate-800 relative selection:bg-indigo-500 selection:text-white">
 
-    <!-- Navigation Bar -->
-    <nav class="fixed w-full z-[100] bg-surface/80 backdrop-blur-md border-b border-slate-200/50">
+    <!-- NOISE OVERLAY -->
+    <div class="noise-bg"></div>
+
+    <!-- BACKGROUND BLOBS -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <!-- ✅ NAVBAR: ORIGINAL STYLE (White, Text Links, Clean) -->
+    <nav class="fixed top-0 w-full z-[100] bg-white border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="flex justify-between h-20 items-center">
+            <div class="flex justify-between h-24 items-center">
                 
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="text-2xl font-black tracking-tighter group">
-                        TK<span class="text-primary inline-block group-hover:rotate-12 transition-transform">.</span>
+                    <a href="#" class="text-3xl font-black tracking-tighter text-slate-900 group">
+                        TK<span class="text-indigo-600 group-hover:rotate-12 inline-block transition-transform">.</span>
                     </a>
                 </div>
                 
-                <!-- Desktop Navigation (Contact Me is now a link) -->
-                <div class="hidden md:flex items-center space-x-10 text-[13px] font-bold uppercase tracking-widest text-slate-500">
-                    <a href="#hero" class="nav-link hover:text-dark transition-colors">Home</a>
-                    <a href="#about" class="nav-link hover:text-dark transition-colors">About</a>
-                    <a href="#education" class="nav-link hover:text-dark transition-colors">Education</a>
-                    <a href="#skills" class="nav-link hover:text-dark transition-colors">Skills</a>
-                    <a href="#projects" class="nav-link hover:text-dark transition-colors">Projects</a>
-                    <a href="#contact" class="nav-link hover:text-dark transition-colors">Contact Me</a>
+                <!-- Desktop Navigation (Text Links Only - No Buttons) -->
+                <div class="hidden md:flex items-center space-x-10 text-[12px] font-bold uppercase tracking-widest text-slate-500">
+                    <a href="#hero" class="nav-link hover:text-indigo-600 transition-colors">Home</a>
+                    <a href="#about" class="nav-link hover:text-indigo-600 transition-colors">About</a>
+                    <a href="#education" class="nav-link hover:text-indigo-600 transition-colors">Education</a>
+                    <a href="#skills" class="nav-link hover:text-indigo-600 transition-colors">Skills</a>
+                    <a href="#projects" class="nav-link hover:text-indigo-600 transition-colors">Projects</a>
+                    <a href="#contact" class="nav-link hover:text-indigo-600 transition-colors">Contact Me</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button class="p-2 text-dark">
-                        <i class="fa-solid fa-bars-staggered text-xl"></i>
+                    <button class="text-slate-900 text-xl">
+                        <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Artistic Background Blobs (Using Tailwind blur) -->
-    <div class="fixed top-[-10%] right-[-10%] w-[500px] h-[500px] bg-indigo-100 rounded-full blur-[120px] opacity-50 -z-10"></div>
-    <div class="fixed bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-pink-50 rounded-full blur-[100px] opacity-60 -z-10"></div>
+    <!-- HERO SECTION (Modern Content) -->
+    <section id="hero" class="min-h-screen flex items-center pt-24 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Side: Text -->
+            <div class="space-y-6">
+                <span class="inline-block py-1 px-3 rounded-full bg-indigo-50 text-indigo-600 text-xs font-bold tracking-widest border border-indigo-100 uppercase mb-2">
+                    Web Development Intern
+                </span>
+                
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-slate-900 leading-tight">
+                    Hi, I'm <br>
+                    <span class="text-gradient">Tayyaba Kousar</span>
+                </h1>
+                
+                <p class="text-lg text-slate-600 max-w-lg leading-relaxed font-light">
+                    A motivated Computer Science student passionate about front-end development. I build clean, responsive, and user-friendly websites with a touch of <span class="font-serif italic font-bold text-indigo-600">Logic & Soul</span>.
+                </p>
+                
+                <!-- Buttons -->
+                <div class="flex items-center gap-4 pt-4">
+                    <a href="#contact" class="px-8 py-3.5 bg-indigo-600 text-white rounded-lg font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/30">
+                        Contact Me
+                    </a>
+                    <a href="#about" class="px-8 py-3.5 border border-slate-300 text-slate-700 rounded-lg font-bold hover:border-indigo-600 hover:text-indigo-600 transition">
+                        View About
+                    </a>
+                </div>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Components injected via app.js -->
-        <section id="hero-container" class="min-h-screen"></section>
-        
-        <div id="about-container" class="relative z-10"></div>
+                <!-- Tech Stack Icons -->
+                <div class="pt-8 mt-4 border-t border-slate-200">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Tech Arsenal</p>
+                    <div class="flex gap-6 text-2xl text-slate-400">
+                        <i class="fa-brands fa-react hover:text-[#61DAFB] transition-colors hover:-translate-y-1"></i>
+                        <i class="fa-brands fa-js hover:text-[#F7DF1E] transition-colors hover:-translate-y-1"></i>
+                        <i class="fa-brands fa-html5 hover:text-[#E34F26] transition-colors hover:-translate-y-1"></i>
+                        <i class="fa-brands fa-css3-alt hover:text-[#1572B6] transition-colors hover:-translate-y-1"></i>
+                    </div>
+                </div>
+            </div>
 
-        <div id="background-container" class="relative z-10"></div>
-        
-        <div id="skills-container" class="relative z-10 py-10"></div>
-        
-        <div id="projects-container" class="relative z-10 py-10"></div>
+            <!-- Right Side: Image -->
+            <div class="relative flex justify-center md:justify-end">
+                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-100 to-purple-100 rounded-[3rem] rotate-3 transform scale-90 -z-10"></div>
+                
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" 
+                     alt="Tayyaba Kousar" 
+                     class="relative w-full max-w-md rounded-[2rem] shadow-2xl border-4 border-white object-cover grayscale hover:grayscale-0 transition-all duration-500">
+            </div>
 
+        </div>
+    </section>
+
+    <!-- Placeholder Containers (JS will fill these) -->
+    <main class="max-w-7xl mx-auto px-6 space-y-32 pb-32">
+        <div id="about-container"></div>
+        <div id="background-container"></div>
+        <div id="skills-container"></div>
+        <div id="projects-container"></div>
         <div id="certificates-container"></div>
-
         <div id="stats-container"></div>
+        <div id="contact"></div>
     </main>
 
-    <!-- Footer -->
     <footer id="footer-container"></footer>
-
-    <!-- Your JavaScript -->
     <script src="app.js"></script>
-
+    
+    <script>
+        // Smooth Reveal Script
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.reveal').forEach(el => {
+                if(el.getBoundingClientRect().top < window.innerHeight - 150) {
+                    el.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
