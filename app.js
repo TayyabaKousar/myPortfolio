@@ -105,4 +105,7 @@ function setupStatsCounter() {
 }
 
 // Run everything when DOM is ready
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', async () => {
+    await init();
+    document.getElementById('loading').style.display = 'none';
+});
