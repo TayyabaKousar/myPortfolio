@@ -42,6 +42,34 @@ async function init() {
     // 2. Initialize Observers after components are in DOM
     setupRevealObserver();
     setupStatsCounter();
+    setupCertificateModal();
+}
+
+/**
+ * Certificate modal: open image in overlay and allow close
+ */
+function setupCertificateModal() {
+    const modal = document.getElementById('cert-modal');
+    const modalImg = document.getElementById('cert-modal-img');
+    const closeBtn = document.getElementById('cert-modal-close');
+
+    // open button(s)
+    document.querySelectorAll('.view-cert').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const src = btn.getAttribute('data-src');
+            if (src && modal && modalImg) {
+                modalImg.src = src;
+                modal.classList.remove('hidden');
+            }
+        });
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    }
 }
 
 /**
@@ -52,6 +80,11 @@ function setupRevealObserver() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
+                // animate any progress bars inside this section
+                entry.target.querySelectorAll('[data-width]').forEach(el => {
+                    const w = el.getAttribute('data-width');
+                    if (w) el.style.width = w;
+                });
                 // Performance boost: Ek baar reveal ho jaye to observation rok dein
                 observer.unobserve(entry.target);
             }
