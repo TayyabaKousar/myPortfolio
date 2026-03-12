@@ -7,20 +7,35 @@
             <!-- Left Side: Info -->
             <div class="md:w-1/2 text-center md:text-left reveal">
                 <span class="text-primary font-semibold tracking-wider uppercase text-sm">Web Development Intern</span>
-                <h1 class="text-4xl md:text-6xl font-bold mt-2 mb-4 text-slate-900">
-                    Hi, I'm <span class="text-primary">Tayyaba Kousar</span>
+                <h1 class="text-4xl md:text-6xl font-bold mt-2 mb-2 text-slate-900">
+                    Hi, I'm <span class="text-gradient">Tayyaba Kousar</span>
                 </h1>
-                <p class="text-lg text-slate-600 mb-8 max-w-lg mx-auto md:mx-0">
+                <p id="role-text" class="text-xl font-semibold text-primary mb-4"></p>
+                <p class="text-lg text-slate-600 mb-4 max-w-lg mx-auto md:mx-0">
                     A motivated Computer Science student passionate about front-end development. I build clean, responsive, and user-friendly websites.
                 </p>
+                <!-- tech stack icons -->
+                <div class="flex gap-6 text-2xl text-slate-400 justify-center md:justify-start mb-6">
+                    <i class="fa-brands fa-react hover:text-[#61DAFB] transition-colors hover:-translate-y-1"></i>
+                    <i class="fa-brands fa-js hover:text-[#F7DF1E] transition-colors hover:-translate-y-1"></i>
+                    <i class="fa-brands fa-html5 hover:text-[#E34F26] transition-colors hover:-translate-y-1"></i>
+                    <i class="fa-brands fa-css3-alt hover:text-[#1572B6] transition-colors hover:-translate-y-1"></i>
+                </div>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a href="#contact" class="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1">
                         Contact Me
                     </a>
-                   <!-- View About Button -->
-             <a href="#about" class="view-about-btn">
-               <span>View About</span>
-                   </a>
+                    <a href="#about" class="px-8 py-3 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition transform hover:-translate-y-1">
+                        About Me
+                    </a>
+                    <a href="assets/resume.pdf" download class="px-8 py-3 bg-white text-primary rounded-lg border border-primary shadow hover:bg-indigo-50 transition transform hover:-translate-y-1">
+                        Resume
+                    </a>
+                </div>
+                <!-- social links -->
+                <div class="flex gap-4 mt-6 justify-center md:justify-start text-2xl text-slate-600">
+                    <a href="https://github.com/TayyabaKousar" target="_blank" class="hover:text-primary"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/" target="_blank" class="hover:text-primary"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
 
@@ -34,5 +49,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Scroll down arrow -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+        <a href="#about" class="text-primary text-2xl"><i class="fa-solid fa-chevron-down"></i></a>
     </div>
 </section>

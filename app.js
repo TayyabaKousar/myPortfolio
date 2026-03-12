@@ -72,6 +72,23 @@ function setupCertificateModal() {
     }
 }
 
+// Hero role rotation
+function setupHeroRoles() {
+    const roles = ['Web Developer', 'Front‑end Enthusiast', 'Learner', 'Cyber Security Aspirant'];
+    let idx = 0;
+    const el = document.getElementById('role-text');
+    if (!el) return;
+    const show = () => {
+        el.classList.remove('fade-text');
+        void el.offsetWidth; // trigger reflow
+        el.textContent = roles[idx];
+        el.classList.add('fade-text');
+        idx = (idx + 1) % roles.length;
+    };
+    show();
+    setInterval(show, 2500);
+}
+
 /**
  * Reveal Observer: Sections ko scroll par smoothly dikhane ke liye
  */
