@@ -1,57 +1,91 @@
-<section id="hero" class="relative overflow-hidden min-h-screen flex items-center justify-center pt-16">
-    <div class="absolute -left-24 -top-24 w-72 h-72 rounded-full bg-indigo-200 opacity-40 blur-3xl pointer-events-none"></div>
-    <div class="absolute -right-24 -bottom-24 w-72 h-72 rounded-full bg-pink-200 opacity-30 blur-3xl pointer-events-none"></div>
+<section id="hero" class="relative overflow-hidden min-h-screen flex items-center justify-center pt-16 bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50">
+    <!-- Animated background elements -->
+    <div class="absolute top-20 left-10 w-32 h-32 bg-indigo-300 rounded-full opacity-20 animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-24 h-24 bg-purple-300 rounded-full opacity-20 animate-float-delayed"></div>
+    <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-300 rounded-full opacity-15 animate-float"></div>
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
-            
+
             <!-- Left Side: Info -->
             <div class="md:w-1/2 text-center md:text-left reveal">
-                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Web Development Intern</span>
-                <h1 class="text-4xl md:text-6xl font-bold mt-2 mb-2 text-slate-900">
-                    Hi, I'm <span class="text-gradient">Tayyaba Kousar</span>
+                <span class="inline-block px-4 py-2 bg-indigo-100 text-indigo-800 font-semibold tracking-wider uppercase text-sm rounded-full mb-4">Aspiring Web Developer</span>
+                <h1 class="text-4xl md:text-6xl font-bold mt-2 mb-2 text-slate-900 leading-tight">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Tayyaba Kousar</span>
                 </h1>
-                <p id="role-text" class="text-xl font-semibold text-primary mb-4"></p>
-                <p class="text-lg text-slate-600 mb-4 max-w-lg mx-auto md:mx-0">
-                    A motivated Computer Science student passionate about front-end development. I build clean, responsive, and user-friendly websites.
+                <div class="text-xl font-semibold text-indigo-600 mb-4 h-8">
+                    <span id="role-text" class="typing-animation"></span>
+                </div>
+                <p class="text-lg text-slate-600 mb-6 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    A passionate Computer Science student crafting digital experiences with code. I love turning ideas into beautiful, functional websites that make a difference.
                 </p>
-                <!-- tech stack icons -->
-                <div class="flex gap-6 text-2xl text-slate-400 justify-center md:justify-start mb-6">
-                    <i class="fa-brands fa-react hover:text-[#61DAFB] transition-colors hover:-translate-y-1"></i>
-                    <i class="fa-brands fa-js hover:text-[#F7DF1E] transition-colors hover:-translate-y-1"></i>
-                    <i class="fa-brands fa-html5 hover:text-[#E34F26] transition-colors hover:-translate-y-1"></i>
-                    <i class="fa-brands fa-css3-alt hover:text-[#1572B6] transition-colors hover:-translate-y-1"></i>
+                <!-- Tech stack with tooltips -->
+                <div class="flex gap-6 text-2xl text-slate-400 justify-center md:justify-start mb-8">
+                    <div class="group relative">
+                        <i class="fa-brands fa-react hover:text-[#61DAFB] transition-all duration-300 hover:-translate-y-2 hover:scale-110 cursor-pointer"></i>
+                        <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">React</span>
+                    </div>
+                    <div class="group relative">
+                        <i class="fa-brands fa-js hover:text-[#F7DF1E] transition-all duration-300 hover:-translate-y-2 hover:scale-110 cursor-pointer"></i>
+                        <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">JavaScript</span>
+                    </div>
+                    <div class="group relative">
+                        <i class="fa-brands fa-html5 hover:text-[#E34F26] transition-all duration-300 hover:-translate-y-2 hover:scale-110 cursor-pointer"></i>
+                        <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">HTML5</span>
+                    </div>
+                    <div class="group relative">
+                        <i class="fa-brands fa-css3-alt hover:text-[#1572B6] transition-all duration-300 hover:-translate-y-2 hover:scale-110 cursor-pointer"></i>
+                        <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">CSS3</span>
+                    </div>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#contact" class="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1">
-                        Contact Me
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
+                    <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 hover:scale-105">
+                        Get In Touch
                     </a>
-                    <a href="#about" class="px-8 py-3 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition transform hover:-translate-y-1">
-                        About Me
+                    <a href="#projects" class="px-8 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg font-bold hover:bg-indigo-600 hover:text-white transition-all transform hover:-translate-y-1 hover:scale-105">
+                        View My Work
                     </a>
-                    <a href="assets/resume.pdf" download class="px-8 py-3 bg-white text-primary rounded-lg border border-primary shadow hover:bg-indigo-50 transition transform hover:-translate-y-1">
-                        Resume
+                    <a href="assets/resume.pdf" download class="px-8 py-3 bg-white text-indigo-600 rounded-lg border border-indigo-600 shadow hover:bg-indigo-50 transition-all transform hover:-translate-y-1 hover:scale-105">
+                        <i class="fa-solid fa-download mr-2"></i>Resume
                     </a>
                 </div>
-                <!-- social links -->
-                <div class="flex gap-4 mt-6 justify-center md:justify-start text-2xl text-slate-600">
-                    <a href="https://github.com/TayyabaKousar" target="_blank" class="hover:text-primary"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/" target="_blank" class="hover:text-primary"><i class="fab fa-linkedin"></i></a>
+                <!-- Social links with better styling -->
+                <div class="flex gap-6 justify-center md:justify-start text-2xl">
+                    <a href="https://github.com/TayyabaKousar" target="_blank" class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-all transform hover:-translate-y-1 hover:scale-110">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tayyaba-kousar14" target="_blank" class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-1 hover:scale-110">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:tayyabakousar352@gmail.com" class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-red-500 hover:text-white transition-all transform hover:-translate-y-1 hover:scale-110">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Right Side: Large Picture -->
+            <!-- Right Side: Profile Picture -->
             <div class="md:w-1/2 flex justify-center reveal">
-                <div class="relative w-64 h-64 md:w-96 md:h-96">
-                    <!-- Decorative blob background -->
-                    <div class="absolute inset-0 bg-indigo-200 rounded-full blur-2xl opacity-50 animate-pulse"></div>
-                    <!-- Image -->
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoutGAoayEyW_cGXHtCHk7lEWxtOq78t1SLg&s" alt="Tayyaba Kousar" class="relative w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white transform rotate-3 hover:rotate-0 transition duration-500">
+                <div class="relative">
+                    <!-- Custom illustration or placeholder -->
+                    <div class="w-80 h-80 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-2xl">
+                        TK
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-4 -right-4 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-2xl animate-bounce">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-xl animate-pulse">
+                        <i class="fas fa-heart"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Scroll down arrow -->
+
+    <!-- Scroll indicator -->
     <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-        <a href="#about" class="text-primary text-2xl"><i class="fa-solid fa-chevron-down"></i></a>
+        <a href="#about" class="text-indigo-600 text-2xl hover:text-indigo-800 transition-colors">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
     </div>
 </section>

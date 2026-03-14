@@ -43,6 +43,7 @@ async function init() {
     setupRevealObserver();
     setupStatsCounter();
     setupCertificateModal();
+    setupHeroRoles();
 }
 
 /**
@@ -72,21 +73,36 @@ function setupCertificateModal() {
     }
 }
 
-// Hero role rotation
+// Hero role typing animation
 function setupHeroRoles() {
-    const roles = ['Web Developer', 'Front‑end Enthusiast', 'Learner', 'Cyber Security Aspirant'];
-    let idx = 0;
+    const roles = ['Web Developer', 'Front-end Enthusiast', 'CS Student', 'Problem Solver'];
+    let roleIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
     const el = document.getElementById('role-text');
     if (!el) return;
-    const show = () => {
-        el.classList.remove('fade-text');
-        void el.offsetWidth; // trigger reflow
-        el.textContent = roles[idx];
-        el.classList.add('fade-text');
-        idx = (idx + 1) % roles.length;
+
+    const type = () => {
+        const currentRole = roles[roleIdx];
+        if (isDeleting) {
+            el.textContent = currentRole.substring(0, charIdx--);
+            if (charIdx < 0) {
+                isDeleting = false;
+                roleIdx = (roleIdx + 1) % roles.length;
+                setTimeout(type, 500);
+                return;
+            }
+        } else {
+            el.textContent = currentRole.substring(0, charIdx++);
+            if (charIdx > currentRole.length) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+                return;
+            }
+        }
+        setTimeout(type, isDeleting ? 100 : 150);
     };
-    show();
-    setInterval(show, 2500);
+    type();
 }
 
 /**
