@@ -26,8 +26,8 @@ async function loadComponent(id, file) {
 async function init() {
     // 1. Parallel Loading (Speed optimize karne ke liye)
     const components = [
-        { id: 'hero-container', file: 'components/hero.html' },
         { id: 'about-container', file: 'components/about.html' },
+        { id: 'experience-container', file: 'components/experience.html' },
         { id: 'background-container', file: 'components/BackGround.html' },
         { id: 'stats-container', file: 'components/stats.html' },
         { id: 'skills-container', file: 'components/skills.html' },
