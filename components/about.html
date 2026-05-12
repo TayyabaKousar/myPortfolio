@@ -1,95 +1,120 @@
 <section id="about" class="relative py-24 bg-transparent overflow-hidden">
-    
-    <!-- Decorative Background Blobs (Theme Match) -->
+    <!-- Decorative Background Blobs -->
     <div class="absolute top-1/4 left-0 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob"></div>
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob animation-delay-2000"></div>
 
-    <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         
-        <!-- Heading (Serif Font + Centered) -->
+        <!-- Heading -->
         <div class="text-center mb-16 reveal">
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-4">
-                About Me
-            </h2>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-4">About Me</h2>
             <div class="w-20 h-1.5 bg-indigo-600 rounded-full mx-auto"></div>
+            <p class="mt-4 text-slate-500 font-medium">Turning complex problems into autonomous solutions.</p>
         </div>
 
-        <!-- Main Content Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
-            <!-- Left Side: Professional Summary Text -->
-            <div class="reveal space-y-6">
-                
-                <h3 class="text-3xl font-serif font-bold text-slate-900">
-                    Professional <span class="text-gradient">Summary</span>
-                </h3>
-                
-                <div class="prose prose-lg text-slate-600 leading-relaxed font-light">
-                    <p class="mb-6">
-                        I am a CS student at <span class="font-bold text-slate-900">Lahore Garrison University (LGU)</span> passionate about solving real-world problems. I learned Web Development at <span class="font-bold text-slate-900">techtide.co</span> and am currently learning Agentic AI at <span class="font-bold text-slate-900">NASTP</span>. With experience in Web Development and a current focus on Agentic AI, I love exploring how technology can automate and simplify lives.
+            <!-- Left Side: Professional Story (Modern Style) -->
+            <div class="lg:col-span-7 reveal space-y-8">
+                <div>
+                    <h3 class="text-3xl font-serif font-bold text-slate-900 mb-4">
+                        My Professional <span class="text-indigo-600">Journey</span>
+                    </h3>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        I am a Computer Science student at <span class="px-2 py-1 bg-indigo-50 text-indigo-700 rounded-md font-bold text-sm">LGU</span> with a mission to bridge the gap between creative web design and advanced AI intelligence.
                     </p>
-                    <!-- Key points list -->
-                    <ul class="list-disc list-inside text-slate-600 font-light space-y-2">
-                        <li>Web Development skills from techtide.co</li>
-                        <li>Agentic AI learning  with Skill2Success at NASTP</li>
-                        <li>Passionate about automation and problem-solving</li>
-                    </ul>
-                    <!-- Resume button -->
-                    <div class="mt-6">
-                        <a href="assets/resume.pdf" download class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1">
-                            <i class="fa-solid fa-download mr-2"></i> Download Resume
-                        </a>
+                </div>
+
+                <!-- Modern Skill Cards instead of bullets -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Web Dev Card -->
+                    <div class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-laptop-code text-indigo-600"></i>
+                            <h4 class="font-bold text-slate-900">Web Developer</h4>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed">Refined my skills at <b>techtide.co</b>, building responsive and high-performance front-ends.</p>
                     </div>
+
+                    <!-- AI Agent Card (Highlighted) -->
+                    <div class="p-5 bg-indigo-600 rounded-2xl shadow-lg shadow-indigo-200 border border-indigo-500">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-robot text-white"></i>
+                            <h4 class="font-bold text-white">AI Agent Developer</h4>
+                        </div>
+                        <p class="text-sm text-indigo-100 leading-relaxed">Deep-diving into Agentic AI at <b>NASTP</b> with Skill2Success, mastering autonomous workflows.</p>
+                    </div>
+                </div>
+
+                <p class="text-slate-600 italic">
+                    "I love exploring how technology can automate and simplify lives through clean code and smart agents."
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="assets/resume.pdf" download class="inline-flex items-center px-8 py-3 bg-indigo-600 text-white rounded-xl shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition transform hover:-translate-y-1">
+                        <i class="fa-solid fa-file-pdf mr-2"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="inline-flex items-center px-8 py-3 border-2 border-slate-200 text-slate-600 rounded-xl hover:bg-slate-50 transition">
+                        Let's Talk
+                    </a>
                 </div>
             </div>
 
-            <!-- Right Side: Profile Card (Modern Style) -->
-            <div class="relative reveal delay-200 flex justify-center">
-                
-                <!-- Soft Gradient Behind Card -->
-                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-100 to-purple-100 rounded-[2rem] rotate-3 transform scale-105 -z-10"></div>
+            <!-- Right Side: Profile Card (Updated) -->
+            <div class="lg:col-span-5 relative reveal delay-200 flex justify-center">
+                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-100 to-purple-100 rounded-[2.5rem] rotate-3 transform scale-105 -z-10"></div>
 
-                <!-- Main Card -->
-                <div class="relative z-10 bg-white p-8 rounded-[2rem] shadow-xl shadow-indigo-500/10 border border-slate-100 w-full max-w-md hover:-translate-y-2 transition-transform duration-500">
+                <div class="relative z-10 bg-white p-8 rounded-[2.5rem] shadow-xl shadow-indigo-500/5 border border-slate-100 w-full max-w-md">
                     <div class="flex items-center gap-5 mb-8">
-                        <!-- Icon Box -->
-                        <div class="w-14 h-14 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-indigo-600 shadow-sm">
-                            <i class="fa-solid fa-code text-2xl"></i>
+                        <div class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-200">
+                            <i class="fa-solid fa-bolt text-2xl"></i>
                         </div>
                         <div>
-                            <h4 class="text-xl font-serif font-bold text-slate-900">Web Enthusiast</h4>
-                            <p class="text-sm text-slate-500 font-medium">Based in Pakistan 🇵🇰</p>
+                            <h4 class="text-xl font-bold text-slate-900">Tayyaba Kousar</h4>
+                            <p class="text-sm text-slate-500">Based in Lahore, Pakistan 🇵🇰</p>
                         </div>
                     </div>
 
-                    <!-- Progress Bars -->
-                    <div class="space-y-5">
+                    <!-- Progress Bars (Updated) -->
+                    <div class="space-y-6">
+                        <!-- AI Progress (NEW) -->
                         <div class="space-y-2">
-                            <div class="flex justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
-                                <span>Frontend</span>
-                                <span>85%</span>
+                            <div class="flex justify-between text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                                <span>Agentic AI & Automation</span>
+                                <span class="text-indigo-600">Learning</span>
                             </div>
                             <div class="h-2 bg-slate-100 rounded-full w-full overflow-hidden">
-                                <div class="h-2 bg-indigo-600 rounded-full shadow-[0_0_10px_rgba(79,70,229,0.4)]" data-width="85%" style="width:0"></div>
+                                <div class="h-2 bg-indigo-600 rounded-full animate-pulse" style="width: 65%"></div>
                             </div>
                         </div>
 
                         <div class="space-y-2">
-                            <div class="flex justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
+                            <div class="flex justify-between text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                                <span>Web Development</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="h-2 bg-slate-100 rounded-full w-full overflow-hidden">
+                                <div class="h-2 bg-indigo-400 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                 <span>C++ / Logic</span>
                                 <span>80%</span>
                             </div>
                             <div class="h-2 bg-slate-100 rounded-full w-full overflow-hidden">
-                                <div class="h-2 bg-purple-500 rounded-full shadow-[0_0_10px_rgba(168,85,247,0.4)]" data-width="80%" style="width:0"></div>
+                                <div class="h-2 bg-purple-500 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-6 border-t border-slate-100 flex justify-between items-center">
-                        <span class="text-sm font-bold text-slate-400">Current Status</span>
-                        <span class="text-xs font-bold bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-full flex items-center gap-2">
-                            <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                            Open to Work
+                    <div class="mt-10 pt-6 border-t border-slate-50 flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Status</span>
+                        <span class="text-xs font-bold bg-green-50 text-green-600 border border-green-100 px-4 py-2 rounded-full flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-ping"></span>
+                            Ready to Collaborate
                         </span>
                     </div>
                 </div>
