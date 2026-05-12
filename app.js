@@ -15,11 +15,18 @@ async function loadComponent(id, file) {
         if (response.ok) {
             container.innerHTML = await response.text();
         } else {
-            console.error(`Error loading ${file}`);
+            console.error(`Error loading ${file}: ${response.status} ${response.statusText}`);
+            showServerWarning();
         }
     } catch (error) {
         console.error(`Network error: ${file}`, error);
+        showServerWarning();
     }
+}
+
+function showServerWarning() {
+    const warning = document.getElementById('server-warning');
+    if (warning) warning.classList.remove('hidden');
 }
 
 // Initialization function
@@ -75,7 +82,7 @@ function setupCertificateModal() {
 
 // Hero role typing animation
 function setupHeroRoles() {
-    const roles = ['Web Developer', 'Front-end Enthusiast', 'CS Student', 'Problem Solver'];
+    const roles = ['Computer Science Student', 'Web Developer', 'Agentic AI Enthusiast', 'Problem Solver'];
     let roleIdx = 0;
     let charIdx = 0;
     let isDeleting = false;

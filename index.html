@@ -93,6 +93,10 @@
 </head>
 <body class="bg-[#f8fafc] text-slate-800 relative selection:bg-indigo-500 selection:text-white">
 
+    <div id="server-warning" class="fixed inset-x-0 top-0 z-[150] hidden bg-yellow-100 border-b border-yellow-300 text-yellow-900 px-6 py-3 text-sm text-center">
+        Please open this site with a local server, not file://. Use <strong>http://127.0.0.1:5501</strong> or Live Server.
+    </div>
+
     <!-- NOISE OVERLAY -->
     <div class="noise-bg"></div>
 
@@ -162,7 +166,7 @@
                 </h1>
                 
                 <p class="text-lg text-slate-600 max-w-lg leading-relaxed font-light">
-                    A motivated Computer Science student passionate about front-end development. I build clean, responsive, and user-friendly websites with a touch of <span class="font-serif italic font-bold text-indigo-600">Logic & Soul</span>.
+                    Building autonomous AI agents and modern web experiences. A motivated Computer Science student passionate about front-end development with a touch of <span class="font-serif italic font-bold text-indigo-600">Logic & Soul</span>.
                 </p>
                 
                 <!-- Buttons -->
@@ -223,6 +227,11 @@
                 }
             });
         });
+
+        if (location.protocol !== 'http:' && location.protocol !== 'https:') {
+            const warning = document.getElementById('server-warning');
+            if (warning) warning.classList.remove('hidden');
+        }
     </script>
 </body>
 </html>
