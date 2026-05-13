@@ -152,6 +152,7 @@
     </nav>
 
 <!-- ✅ ULTRA-PREMIUM HERO SECTION -->
+<!-- ✅ FIXED ULTRA-PREMIUM HERO SECTION -->
 <section id="hero" class="min-h-screen flex items-center pt-24 relative overflow-hidden bg-[#fbfbff]">
     
     <!-- Background Tech Grid & Blobs -->
@@ -192,7 +193,7 @@
 
                 <!-- CTA & Socials -->
                 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6">
-                    <a href="#contact" class="group relative px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold overflow-hidden transition-all hover:shadow-[0_20px_50px_rgba(79,70,229,0.3)]">
+                    <a href="#contact" class="group relative px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold overflow-hidden transition-all hover:shadow-[0_20px_50px_rgba(79,70,229,0.3)] text-center">
                         <span class="relative z-10">Start a Project</span>
                         <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </a>
@@ -200,50 +201,54 @@
                     <div class="h-10 w-[1px] bg-slate-200 hidden sm:block"></div>
 
                     <div class="flex gap-4">
-                        <a href="https://github.com/TayyabaKousar" class="w-14 h-14 rounded-2xl border border-slate-100 bg-white flex items-center justify-center text-slate-600 hover:text-indigo-600 hover:shadow-lg transition-all">
+                        <a href="https://github.com/TayyabaKousar" target="_blank" class="w-14 h-14 rounded-2xl border border-slate-100 bg-white flex items-center justify-center text-slate-600 hover:text-indigo-600 hover:shadow-lg transition-all">
                             <i class="fab fa-github text-2xl"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/tayyaba-kousar14" class="w-14 h-14 rounded-2xl border border-slate-100 bg-white flex items-center justify-center text-slate-600 hover:text-[#0A66C2] hover:shadow-lg transition-all">
+                        <a href="https://www.linkedin.com/in/tayyaba-kousar14" target="_blank" class="w-14 h-14 rounded-2xl border border-slate-100 bg-white flex items-center justify-center text-slate-600 hover:text-[#0A66C2] hover:shadow-lg transition-all">
                             <i class="fab fa-linkedin text-2xl"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Content (Col 5) -->
-            <div class="lg:col-span-5 flex justify-center lg:justify-end reveal active">
-                <div class="relative w-full max-w-sm">
-                    <!-- The "Glass" Card -->
-                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-indigo-600/10 rounded-full blur-3xl animate-float"></div>
-                    
-                    <div class="relative z-10 rounded-[3rem] overflow-hidden border-[12px] border-white shadow-[0_40px_100px_rgba(0,0,0,0.1)] aspect-[4/5] group bg-gradient-to-br from-indigo-100 via-purple-50 to-indigo-50">
-                        <!-- Animated Illustration -->
-                         <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80" alt="AI Agent">
-                            
-                        
-                        <!-- Floating Badge on Image -->
-                        <div class="absolute bottom-6 left-6 right-6 p-4 backdrop-blur-xl bg-white/70 border border-white/50 rounded-2xl shadow-xl">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
-                                    <i class="fa-solid fa-robot"></i>
-                                </div>
-                                <div>
-                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">Status</p>
-                                    <p class="text-sm font-bold text-slate-800">Mastering Agentic AI</p>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Right Content (Col 5) - FIXED IMAGE FRAME -->
+            <!-- Right Content (Col 5) - FIXED ICONS ON TOP -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end reveal active">
+    <div class="relative w-full max-w-[380px] p-6"> <!-- Added padding taake icons cut na hon -->
+        
+        <!-- Glass Blob Behind Image -->
+        <div class="absolute -top-10 -left-10 w-32 h-32 bg-indigo-600/10 rounded-full blur-3xl animate-float"></div>
+        
+        <!-- Frame Container (z-10) -->
+        <div class="relative z-10 rounded-[3rem] overflow-hidden border-[12px] border-white shadow-[0_40px_100px_rgba(0,0,0,0.1)] aspect-square bg-white">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1HaCXGIYGuV_RUnZKLjQDTdgektdPr2sf2A&s" 
+                  alt="AI Agent" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                
+            <!-- Status Badge (z-20) -->
+            <div class="absolute bottom-6 left-6 right-6 p-4 backdrop-blur-xl bg-white/70 border border-white/50 rounded-2xl shadow-xl z-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
+                        <i class="fa-solid fa-robot"></i>
                     </div>
-
-                    <!-- Tech Arsenal Floating Tags -->
-                    <div class="absolute -right-6 top-1/4 w-16 h-16 bg-white shadow-2xl rounded-2xl flex items-center justify-center animate-float border border-slate-50">
-                        <i class="fa-brands fa-react text-2xl text-[#61DAFB]"></i>
-                    </div>
-                    <div class="absolute -left-6 bottom-1/4 w-16 h-16 bg-white shadow-2xl rounded-2xl flex items-center justify-center animate-float-delayed border border-slate-50">
-                        <i class="fa-solid fa-diagram-project text-2xl text-rose-500"></i>
+                    <div>
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">Status</p>
+                        <p class="text-sm font-bold text-slate-800">Mastering Agentic AI</p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Tech Arsenal Floating Tags (Increased z-index to z-30) -->
+        <div class="absolute -right-2 top-10 w-16 h-16 bg-white shadow-2xl rounded-2xl flex items-center justify-center animate-float border border-slate-50 z-30">
+            <i class="fa-brands fa-react text-2xl text-[#61DAFB]"></i>
+        </div>
+        
+        <div class="absolute -left-2 bottom-20 w-16 h-16 bg-white shadow-2xl rounded-2xl flex items-center justify-center animate-float-delayed border border-slate-50 z-30">
+            <i class="fa-solid fa-diagram-project text-2xl text-rose-500"></i>
+        </div>
+    </div>
+</div>
 
         </div>
     </div>
