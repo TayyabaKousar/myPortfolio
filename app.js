@@ -181,4 +181,4 @@ function setupStatsCounter() {
 document.addEventListener('DOMContentLoaded', async () => {
     await init();
     document.getElementById('loading').style.display = 'none';
-});
+}); 
